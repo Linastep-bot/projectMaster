@@ -1,16 +1,17 @@
 #' Install and load packages
 #'
 #' @param packages vector of packages to load.
+#' @param ... Other options used to control matching behavior between duplicate.
 #'
 #' @return Nothing.
 #' @export
-#' @importFrom "utils" "available.packages"
-#' @importFrom "utils" "install.packages"
+#' @import utils
+#'
 #'
 #' @examples package_manager(c("shiny"))
 
 #install all packages and load them
-package_manager <- function(packages) {
+package_manager <- function(packages, ...) {
   # Check if packages are installed
   missing_packages <- packages[!sapply(packages, requireNamespace, quietly = TRUE)]
 

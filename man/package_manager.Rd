@@ -4,10 +4,12 @@
 \alias{package_manager}
 \title{Install and load packages}
 \usage{
-package_manager(packages)
+package_manager(packages, ...)
 }
 \arguments{
 \item{packages}{vector of packages to load.}
+
+\item{...}{Other options used to control matching behavior between duplicate.}
 }
 \value{
 Nothing.
