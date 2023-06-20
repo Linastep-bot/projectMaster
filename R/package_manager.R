@@ -1,12 +1,22 @@
-#install all packages and load them 
+#' Install and load packages
+#'
+#' @param packages vector of packages to load.
+#'
+#' @return Nothing.
+#' @export
+#' @importFrom "utils" "available.packages"
+#' @importFrom "utils" "install.packages"
+#'
+#' @examples package_manager(c("shiny"))
 
+#install all packages and load them
 package_manager <- function(packages) {
   # Check if packages are installed
   missing_packages <- packages[!sapply(packages, requireNamespace, quietly = TRUE)]
-  
+
   if (length(missing_packages) > 0) {
     # Install missing packages
-    
+
     # Check if the package name is present in the list of available packages
     cran_packages <- available.packages()
     for (pac in missing_packages) {
@@ -18,12 +28,12 @@ package_manager <- function(packages) {
           install.packages("BiocManager")
           library(BiocManager)
         }
-        
+
         BiocManager::install(pac, update = TRUE, ask = FALSE)
       }
     }
   }
-  
+
   # Load the installed packages
   for (pkg in packages) {
     library(pkg, character.only = TRUE)
