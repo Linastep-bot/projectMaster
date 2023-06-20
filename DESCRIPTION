@@ -3,7 +3,7 @@ Title: Master of RaukR project
 Version: 0.0.0.9000
 Authors@R: 
     person("Lina", "Stepanauskaite", , "lina.stepanauskaite@scilifelab.se", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: Package loads the necessary libraries and dependencies as well as allowing created functions to be called.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
