@@ -10,7 +10,7 @@ readMultiFasta(file_path)
 \item{file_path}{path to the file.}
 }
 \value{
-Nothing.
+sequences
 }
 \description{
 Read fasta files

@@ -2,7 +2,7 @@
 #'
 #' @param file_path path to the file.
 #'
-#' @return Nothing.
+#' @return sequences
 #' @export
 #'
 #' @examples \dontrun{sequences <- readMultiFasta("path/to/your/file.fasta")}
